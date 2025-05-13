@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profit and Loss Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Profit and Loss Calculator</h1>
+        <div class="total">
+            <span id="totalProfit">+ 0</span>
+            <span id="totalLoss">- 0</span>
+        </div>
+
+        <div class="table-container" id="plTable">
+            <!-- Dynamically added rows will be placed here -->
+        </div>
+
+        <button id="addPLBtn" class="btn-primary">Add New P&L</button>
+
+        <!-- Popup form -->
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span id="closePopup" class="close-btn">&times;</span>
+                <h2>Add New P&L</h2>
+                <form id="plForm">
+                    <div class="form-group">
+                        <label for="type">Type</label>
+                        <select id="type" required>
+                            <option value="profit">Profit</option>
+                            <option value="loss">Loss</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">Amount</label>
+                        <input type="number" id="amount" placeholder="Enter amount" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reason">Reason</label>
+                        <input type="text" id="reason" placeholder="Reason for P&L" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Add</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
